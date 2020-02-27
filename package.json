@@ -39,6 +39,7 @@
     "babel-preset-expo": "~8.0.0",
     "jest": "^25.1.0",
     "jest-expo": "^36.0.1",
+    "react-native-storybook-loader": "^1.8.1",
     "react-test-renderer": "^16.13.0"
   },
   "private": true,
@@ -50,5 +51,13 @@
     "setupFilesAfterEnv": [
       "<rootDir>/__mocks__/globalMock.js"
     ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./components"
+      ],
+      "pattern": "*.stories.js"
+    }
   }
 }
