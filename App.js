@@ -1,25 +1,42 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { Provider } from "react-redux";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import TodosScreen from "./screens/TodosScreen";
-import StorybookUIRoot from './storybook'
+import { createStackNavigator } from "@react-navigation/stack";
+import TodoTabScreen from './screens/TodoTabScreen'
+import StorybookUIRoot from "./storybook";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const Tab = createMaterialTopTabNavigator();
+const Stack = createStackNavigator();
+
+//font awesome initialization
+library.add(
+  faStar
+)
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Todos" component={TodosScreen} />
-        <Tab.Screen name="Pinned" component={TodosScreen} />
-        <Tab.Screen name="Done" component={TodosScreen} />
-        {
-          __DEV__ &&
-            <Tab.Screen name="Storybook" component={StorybookUIRoot} />
-        }
-      </Tab.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Todos"
+          component={TodoTabScreen}
+          options={({navigation}) => ({
+            title: "Simple Todo",
+            headerRight: () => (
+              __DEV__ && 
+                <Button
+                  title="storybook"
+                  onPress={() => navigation.navigate('Storybook')}
+                />
+            )
+          })} 
+        />
+        <Stack.Screen name="Storybook" component={StorybookUIRoot} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

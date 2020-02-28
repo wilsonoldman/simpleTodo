@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/nobori/.nodebrew/node/v12.16.1/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js remove react-native-storybook-loader
+  /Users/nobori/.nodebrew/node/v12.16.1/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add @fontawesome/fontawesome-free
 
 PATH: 
   /Users/nobori/.nodebrew/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nobori/.nodebrew/current/bin:/Users/nobori/Downloads/flutter/bin:/Users/nobori/Downloads/flutter/bin
@@ -14,12 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/nobori/Documents/workspace/ReactNative/simpleTodo/package.json: Unexpected token } in JSON at position 281
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:310:30)
-      at /usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/@fontawesome%2ffontawesome-free: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:66947:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:140665:22)
+      at Request.emit (events.js:311:20)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141637:10)
+      at Request.emit (events.js:311:20)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:417:28)
+      at IncomingMessage.emit (events.js:323:22)
+      at endReadableNT (_stream_readable.js:1204:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
 npm manifest: 
   {
@@ -32,11 +37,13 @@ npm manifest:
       "eject": "expo eject",
       "storybook": "start-storybook -p 7007",
       "test": "jest",
+      "story": "rnstl && expo start -w"
     },
     "dependencies": {
       "@react-native-community/masked-view": "0.1.5",
       "@react-navigation/material-top-tabs": "^5.1.0",
       "@react-navigation/native": "^5.0.8",
+      "@react-navigation/stack": "^5.1.0",
       "expo": "~36.0.0",
       "react": "~16.9.0",
       "react-dom": "~16.9.0",
@@ -75,6 +82,14 @@ npm manifest:
       "setupFilesAfterEnv": [
         "<rootDir>/__mocks__/globalMock.js"
       ]
+    },
+    "config": {
+      "react-native-storybook-loader": {
+        "searchDir": [
+          "./components"
+        ],
+        "pattern": "*.stories.js"
+      }
     }
   }
 
@@ -1661,6 +1676,14 @@ Lockfile:
     integrity sha512-RlFP6Vpw3JWJrGzGDtnwNvy5OzMcnRn87xTFCHysC8qZC+g4EWfgveVDdc5+Unt/L8FqZAMqwcd3zdm3ZMy6OA==
     dependencies:
       shortid "^2.2.15"
+  
+  "@react-navigation/stack@^5.1.0":
+    version "5.1.0"
+    resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.1.0.tgz#04ac64170da864efafb42b0468491ac605c6e0cc"
+    integrity sha512-hbNn4s8Sp6JDN4SCabhYKW2XaQVo8zm6hYkI/IwthOWbzpfsYNfHnYQR9+6GjtC2Y2mHHv3yJAM4d3lmbx/FiA==
+    dependencies:
+      color "^3.1.2"
+      react-native-iphone-x-helper "^1.2.1"
   
   "@sinonjs/commons@^1.7.0":
     version "1.7.1"
@@ -10340,6 +10363,11 @@ Lockfile:
       hoist-non-react-statics "^2.3.1"
       invariant "^2.2.4"
       prop-types "^15.7.2"
+  
+  react-native-iphone-x-helper@^1.2.1:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
+    integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
   
   react-native-paper@^3.6.0:
     version "3.6.0"
