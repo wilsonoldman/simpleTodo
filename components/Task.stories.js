@@ -10,7 +10,7 @@ export const task = {
   state: 'TASK_INBOX',
 }
 
-export const actions = {
+const actions = {
   onArchiveTask: action('onArchiveTask'),
   onPinTask: action('onPinTask')
 }
