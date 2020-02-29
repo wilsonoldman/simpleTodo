@@ -11,7 +11,7 @@ const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
         <View style={styles.taskChild}>
           <Checkbox
             status={state === "TASK_ARCHIVED" ? "checked" : "unchecked"}
-            onPress={onArchiveTask}
+            onPress={() => onArchiveTask(id)}
           />
         </View>
         <View style={styles.taskChild}>
@@ -19,7 +19,7 @@ const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
         </View>
         <TouchableOpacity
           style={[styles.taskChild, { marginLeft: "auto", marginRight: 10 }]}
-          onPress={onPinTask}
+          onPress={() => onPinTask(id)}
         >
           <FontAwesomeIcon
             icon="star"

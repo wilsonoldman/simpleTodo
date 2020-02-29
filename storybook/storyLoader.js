@@ -5,10 +5,12 @@
 
 function loadStories() {
 	require('../components/Task.stories');
+	require('../components/TaskList.stories');
 }
 
 const stories = [
-	'../components/Task.stories'
+	'../components/Task.stories',
+	'../components/TaskList.stories'
 ];
 
 module.exports = {
