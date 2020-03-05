@@ -1,28 +1,28 @@
 import React from 'react'
-import {View, FlatList, Text, StyleSheet} from 'react-native'
+import { View, FlatList, Text, StyleSheet } from 'react-native'
 import Task from './Task'
 import Proptypes from 'prop-types'
 import { ActivityIndicator, Colors } from 'react-native-paper'
 
-const TaskList = ({tasks, loading, onArchiveTask, onPinTask }) => {
+const PureTaskList = ({ tasks, loading, onArchiveTask, onPinTask }) => {
   const events = {
     onArchiveTask,
-    onPinTask
+    onPinTask,
   }
 
-  if(loading){
+  if (loading) {
     return (
       <View style={styles.emptyBox}>
-        <Text style={{padding: 10}}>Loading ...</Text>
+        <Text>Loading ...</Text>
         <ActivityIndicator animating={true} color={Colors.red800} />
       </View>
     )
   }
 
-  if(tasks.length === 0) {
+  if (tasks.length === 0) {
     return (
       <View style={styles.emptyBox}>
-        <Text>Nothing you need to do. Have a sheet and take a coffee!</Text>
+        <Text>No Task found</Text>
       </View>
     )
   }
@@ -31,12 +31,12 @@ const TaskList = ({tasks, loading, onArchiveTask, onPinTask }) => {
     ...tasks.filter(task => task.state === 'TASK_PINNED'),
     ...tasks.filter(task => task.state !== 'TASK_PINNED'),
   ]
-  
-  return(
+
+  return (
     <View>
       <FlatList
         data={tasksInOrder}
-        renderItem={({item}) =>  <Task task={item} {...events}/> }
+        renderItem={({ item }) => <Task task={item} {...events} />}
         keyExtractor={item => item.id}
       />
     </View>
@@ -45,14 +45,17 @@ const TaskList = ({tasks, loading, onArchiveTask, onPinTask }) => {
 
 const styles = StyleSheet.create({
   emptyBox: {
-    flex: 1,
+    height: 100,
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+  },
 })
 
-export default TaskList
+export default PureTaskList
 
-TaskList.prototype = {
-  tasks: Proptypes.arrayOf(Proptypes.object)
+PureTaskList.propTypes = {
+  tasks: Proptypes.array,
+  loading: Proptypes.bool,
+  onPinTask: Proptypes.func,
+  onArchiveTask: Proptypes.func,
 }
