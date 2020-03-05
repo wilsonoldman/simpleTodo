@@ -1,406 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Task archived 1`] = `
-<View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderBottomWidth": 1,
-        "borderColor": "#ccc",
-        "flex": 1,
-        "flexDirection": "row",
-        "paddingBottom": 30,
-        "paddingLeft": 10,
-        "paddingRight": 10,
-        "paddingTop": 30,
-      }
-    }
-  >
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "overflow": "hidden",
-          },
-          Object {
-            "borderRadius": 18,
-            "padding": 6,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Object {
-            "opacity": 1,
-          }
-        }
-      >
-        <Text />
-      </View>
-    </View>
-    <Text
-      ellipsizeMode="tail"
-      numberOfLines={1}
-      style={
-        Array [
-          Object {
-            "color": "#000000",
-            "fontFamily": "System",
-            "fontWeight": "400",
-            "textAlign": "left",
-          },
-          Object {
-            "flex": 1,
-            "fontSize": 20,
-            "paddingLeft": 5,
-            "paddingRight": 10,
-            "textAlignVertical": "center",
-          },
-        ]
-      }
-    >
-      test task
-    </Text>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-          "width": 30,
-        }
-      }
-    >
-      <Text />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Storyshots Task default view 1`] = `
-<View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderBottomWidth": 1,
-        "borderColor": "#ccc",
-        "flex": 1,
-        "flexDirection": "row",
-        "paddingBottom": 30,
-        "paddingLeft": 10,
-        "paddingRight": 10,
-        "paddingTop": 30,
-      }
-    }
-  >
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "overflow": "hidden",
-          },
-          Object {
-            "borderRadius": 18,
-            "padding": 6,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Object {
-            "opacity": 0,
-          }
-        }
-      >
-        <Text />
-      </View>
-    </View>
-    <Text
-      ellipsizeMode="tail"
-      numberOfLines={1}
-      style={
-        Array [
-          Object {
-            "color": "#000000",
-            "fontFamily": "System",
-            "fontWeight": "400",
-            "textAlign": "left",
-          },
-          Object {
-            "flex": 1,
-            "fontSize": 20,
-            "paddingLeft": 5,
-            "paddingRight": 10,
-            "textAlignVertical": "center",
-          },
-        ]
-      }
-    >
-      test task
-    </Text>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-          "width": 30,
-        }
-      }
-    >
-      <Text />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Storyshots Task long title 1`] = `
-<View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderBottomWidth": 1,
-        "borderColor": "#ccc",
-        "flex": 1,
-        "flexDirection": "row",
-        "paddingBottom": 30,
-        "paddingLeft": 10,
-        "paddingRight": 10,
-        "paddingTop": 30,
-      }
-    }
-  >
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "overflow": "hidden",
-          },
-          Object {
-            "borderRadius": 18,
-            "padding": 6,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Object {
-            "opacity": 0,
-          }
-        }
-      >
-        <Text />
-      </View>
-    </View>
-    <Text
-      ellipsizeMode="tail"
-      numberOfLines={1}
-      style={
-        Array [
-          Object {
-            "color": "#000000",
-            "fontFamily": "System",
-            "fontWeight": "400",
-            "textAlign": "left",
-          },
-          Object {
-            "flex": 1,
-            "fontSize": 20,
-            "paddingLeft": 5,
-            "paddingRight": 10,
-            "textAlignVertical": "center",
-          },
-        ]
-      }
-    >
-       sometimes it contains new lines. and hogehoge is so long. do you undestand? 時には娼婦のように。あなたははじめからすべてわかっていたのではないですか？ this is long long story. さよならの向う側に何があるっていうんです？
-    </Text>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-          "width": 30,
-        }
-      }
-    >
-      <Text />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Storyshots Task pinned 1`] = `
-<View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderBottomWidth": 1,
-        "borderColor": "#ccc",
-        "flex": 1,
-        "flexDirection": "row",
-        "paddingBottom": 30,
-        "paddingLeft": 10,
-        "paddingRight": 10,
-        "paddingTop": 30,
-      }
-    }
-  >
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "overflow": "hidden",
-          },
-          Object {
-            "borderRadius": 18,
-            "padding": 6,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Object {
-            "opacity": 0,
-          }
-        }
-      >
-        <Text />
-      </View>
-    </View>
-    <Text
-      ellipsizeMode="tail"
-      numberOfLines={1}
-      style={
-        Array [
-          Object {
-            "color": "#000000",
-            "fontFamily": "System",
-            "fontWeight": "400",
-            "textAlign": "left",
-          },
-          Object {
-            "flex": 1,
-            "fontSize": 20,
-            "paddingLeft": 5,
-            "paddingRight": 10,
-            "textAlignVertical": "center",
-          },
-        ]
-      }
-    >
-      test task
-    </Text>
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-          "width": 30,
-        }
-      }
-    >
-      <Text />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Storyshots TaskList default 1`] = `
+exports[`Storyshots PureTaskList default 1`] = `
 <View>
   <RCTScrollView
     data={
@@ -1066,7 +666,7 @@ exports[`Storyshots TaskList default 1`] = `
 </View>
 `;
 
-exports[`Storyshots TaskList empty 1`] = `
+exports[`Storyshots PureTaskList empty 1`] = `
 <View
   style={
     Object {
@@ -1082,7 +682,7 @@ exports[`Storyshots TaskList empty 1`] = `
 </View>
 `;
 
-exports[`Storyshots TaskList loading 1`] = `
+exports[`Storyshots PureTaskList loading 1`] = `
 <View
   style={
     Object {
@@ -1283,7 +883,7 @@ exports[`Storyshots TaskList loading 1`] = `
 </View>
 `;
 
-exports[`Storyshots TaskList with archived task 1`] = `
+exports[`Storyshots PureTaskList with archived task 1`] = `
 <View>
   <RCTScrollView
     data={
@@ -1949,7 +1549,7 @@ exports[`Storyshots TaskList with archived task 1`] = `
 </View>
 `;
 
-exports[`Storyshots TaskList with pinned task 1`] = `
+exports[`Storyshots PureTaskList with pinned task 1`] = `
 <View>
   <RCTScrollView
     data={
@@ -2612,5 +2212,405 @@ exports[`Storyshots TaskList with pinned task 1`] = `
       </View>
     </View>
   </RCTScrollView>
+</View>
+`;
+
+exports[`Storyshots Task archived 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderBottomWidth": 1,
+        "borderColor": "#ccc",
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingBottom": 30,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 30,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 18,
+            "padding": 6,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <Text
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontFamily": "System",
+            "fontWeight": "400",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+            "fontSize": 20,
+            "paddingLeft": 5,
+            "paddingRight": 10,
+            "textAlignVertical": "center",
+          },
+        ]
+      }
+    >
+      test task
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+          "width": 30,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Task default view 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderBottomWidth": 1,
+        "borderColor": "#ccc",
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingBottom": 30,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 30,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 18,
+            "padding": 6,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <Text
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontFamily": "System",
+            "fontWeight": "400",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+            "fontSize": 20,
+            "paddingLeft": 5,
+            "paddingRight": 10,
+            "textAlignVertical": "center",
+          },
+        ]
+      }
+    >
+      test task
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+          "width": 30,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Task long title 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderBottomWidth": 1,
+        "borderColor": "#ccc",
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingBottom": 30,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 30,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 18,
+            "padding": 6,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <Text
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontFamily": "System",
+            "fontWeight": "400",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+            "fontSize": 20,
+            "paddingLeft": 5,
+            "paddingRight": 10,
+            "textAlignVertical": "center",
+          },
+        ]
+      }
+    >
+       sometimes it contains new lines. and hogehoge is so long. do you undestand? 時には娼婦のように。あなたははじめからすべてわかっていたのではないですか？ this is long long story. さよならの向う側に何があるっていうんです？
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+          "width": 30,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Task pinned 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderBottomWidth": 1,
+        "borderColor": "#ccc",
+        "flex": 1,
+        "flexDirection": "row",
+        "paddingBottom": 30,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 30,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 18,
+            "padding": 6,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <Text
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontFamily": "System",
+            "fontWeight": "400",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+            "fontSize": 20,
+            "paddingLeft": 5,
+            "paddingRight": 10,
+            "textAlignVertical": "center",
+          },
+        ]
+      }
+    >
+      test task
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+          "width": 30,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
 </View>
 `;
