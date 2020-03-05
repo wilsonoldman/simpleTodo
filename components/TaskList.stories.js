@@ -18,11 +18,18 @@ const actions = {
   onPinTask: action('onPinTask')
 }
 
+export const withPinnedTask = [
+  ...tasks.slice(0,5),
+  {id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED'}
+]
+
 storiesOf('TaskList', module)
   .add('default', () => <TaskList tasks={tasks} {...actions} />)
+  .add('empty', () => <TaskList tasks={[]} {...actions} />)
+  .add('loading', () => <TaskList tasks={[]} loading={true} {...actions} />)
   .add('with pinned task', () => (
-    <TaskList tasks={[...tasks.slice(0, tasks.length - 1), {id: '6', title: 'title 6', state: 'TASK_PINNED'}]} {...actions} />
+    <TaskList tasks={withPinnedTask} {...actions} />
   ))
   .add('with archived task', () => (
-    <TaskList tasks={[...tasks.slice(0, tasks.length - 1), {id: '6', title: 'title 6', state: 'TASK_ARCHIVED'}]} {...actions} />
+    <TaskList tasks={[...tasks.slice(0, tasks.length - 1), {id: '6', title: 'Task 6', state: 'TASK_ARCHIVED'}]} {...actions} />
   ))
