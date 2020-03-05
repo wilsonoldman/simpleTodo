@@ -24,5 +24,5 @@ storiesOf('TaskList', module)
     <TaskList tasks={[...tasks.slice(0, tasks.length - 1), {id: '6', title: 'title 6', state: 'TASK_PINNED'}]} {...actions} />
   ))
   .add('with archived task', () => (
-    <TaskList tasks={[...tasks.slice(0, tasks.length - 1), {id: '7', title: 'title 6', state: 'TASK_ARCHIVED'}]} {...actions} />
+    <TaskList tasks={[...tasks.slice(0, tasks.length - 1), {id: '6', title: 'title 6', state: 'TASK_ARCHIVED'}]} {...actions} />
   ))

@@ -1,53 +1,56 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Platform } from "react-native";
 import { Text, Checkbox } from "react-native-paper";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import PropTypes from "prop-types";
+import { AntDesign } from "@expo/vector-icons";
 
 const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.task}>
-        <View style={styles.taskChild}>
-          <Checkbox
-            status={state === "TASK_ARCHIVED" ? "checked" : "unchecked"}
-            onPress={() => onArchiveTask(id)}
-          />
-        </View>
-        <View style={styles.taskChild}>
-          <Text>{title}</Text>
-        </View>
-        <TouchableOpacity
-          style={[styles.taskChild, { marginLeft: "auto", marginRight: 10 }]}
-          onPress={() => onPinTask(id)}
-        >
-          <FontAwesomeIcon
-            icon="star"
-            color={state === "TASK_PINNED" ? "#ffc107" : "#ccc"}
-            s7ize={20}
-          />
-        </TouchableOpacity>
-      </View>
+      <Checkbox
+        status={state === "TASK_ARCHIVED" ? "checked" : "unchecked"}
+        onPress={() => onArchiveTask(id)}
+        style={{ width: 50 }}
+      />
+      <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
+        {title}
+      </Text>
+      <TouchableOpacity onPress={() => onPinTask(id)} style={styles.starIcon}>
+        <AntDesign
+          name="star"
+          size={20}
+          color={state === "TASK_PINNED" ? "orange" : "#ccc"}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
-    width: "100%"
-  },
-  task: {
     flex: 1,
     flexDirection: "row",
-    justifyContent: "flex-start",
+    alignItems: "center",
     backgroundColor: "#fff",
-    borderWidth: 1,
     borderColor: "#ccc",
-    borderRadius: 5
+    borderBottomWidth: 1,
+    paddingTop: 30,
+    paddingBottom: 30,
+    paddingLeft: 10,
+    paddingRight: 10
   },
-  taskChild: {
-    alignSelf: "center"
+  title: {
+    flex: 1,
+    fontSize: 20,
+    paddingRight: 10,
+    paddingLeft: 5,
+    textAlignVertical: "center",
+  },
+  createdAt: {
+    marginLeft: "auto"
+  },
+  starIcon: {
+    width: 30
   }
 });
 

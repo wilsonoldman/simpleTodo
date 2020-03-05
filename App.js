@@ -8,6 +8,7 @@ import TodoTabScreen from './screens/TodoTabScreen'
 import StorybookUIRoot from "./storybook";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import moment from 'moment'
 
 const Tab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
@@ -17,7 +18,10 @@ library.add(
   faStar
 )
 
+moment.locale('ja')
+
 export default function App() {
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
