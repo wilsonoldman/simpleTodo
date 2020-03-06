@@ -51,11 +51,11 @@ const styles = StyleSheet.create({
   },
 })
 
-export default PureTaskList
-
 PureTaskList.propTypes = {
   tasks: Proptypes.array,
   loading: Proptypes.bool,
   onPinTask: Proptypes.func,
   onArchiveTask: Proptypes.func,
 }
+
+export default PureTaskList

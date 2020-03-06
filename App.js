@@ -1,14 +1,16 @@
 import React from 'react'
-import { Button } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { Provider } from 'react-redux'
 import { createStackNavigator } from '@react-navigation/stack'
-import TodoTabScreen from './screens/TodoTabScreen'
 import StorybookUIRoot from './storybook'
+import CreateTaskScreen from './screens/CreateTaskScreen'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import moment from 'moment'
 import store from './store/store'
+import TaskListScreen from './screens/TaskListScreen'
+import { Button } from 'react-native-paper'
+import { Text } from 'react-native'
 
 const Stack = createStackNavigator()
 
@@ -23,24 +25,26 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Todos"
-            component={TodoTabScreen}
-            options={({ navigation }) => ({
-              title: 'Simple Todo',
-              headerRight: function storybookButton() {
-                return (
-                  // eslint-disable-next-line no-undef
-                  __DEV__ && (
-                    <Button
-                      title="storybook"
-                      onPress={() => navigation.navigate('Storybook')}
-                    />
-                  )
-                )
-              },
-            })}
+            name="Tasks"
+            component={TaskListScreen}
+            options={({ navigation }) =>
+              __DEV__ && {
+                headerRight: props => (
+                  <Button onPress={() => navigation.navigate('Storybook')}>
+                    <Text>Storybook</Text>
+                  </Button>
+                ),
+              }
+            }
           />
-          <Stack.Screen name="Storybook" component={StorybookUIRoot} />
+          {__DEV__ && (
+            <Stack.Screen name="Storybook" component={StorybookUIRoot} />
+          )}
+          <Stack.Screen
+            name="CreateTask"
+            component={CreateTaskScreen}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

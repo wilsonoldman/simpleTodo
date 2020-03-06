@@ -1,27 +1,18 @@
-import React, { useEffect } from 'react'
-import { View } from 'react-native'
+import React from 'react'
+import { View, ScrollView } from 'react-native'
 import TaskList from '../containers/TaskList'
 import PropTypes from 'prop-types'
-import { setVisibilityFilter, VisibilityFilters } from '../actions'
+import { setVisibilityFilter } from '../actions'
 import { connect } from 'react-redux'
+import PureFabButton from '../components/PureFabButton'
 
-function TaskListScreen({ navigation, route, onChangeTab }) {
-  useEffect(() => {
-    const unsub = navigation.addListener('focus', () => {
-      if (route.name === 'Archived') {
-        onChangeTab(VisibilityFilters.SHOW_ARCHIVED)
-      } else if (route.name === 'All') {
-        onChangeTab(VisibilityFilters.SHOW_ALL)
-      } else {
-        onChangeTab(VisibilityFilters.SHOW_PINNED)
-      }
-    })
-    return unsub
-  })
-
+function TaskListScreen({ navigation }) {
   return (
-    <View>
-      <TaskList />
+    <View style={{ flex: 1 }}>
+      <ScrollView>
+        <TaskList />
+      </ScrollView>
+      <PureFabButton onPress={() => navigation.navigate('CreateTask')} />
     </View>
   )
 }

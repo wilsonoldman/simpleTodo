@@ -20,7 +20,6 @@ const actions = {
   onPinTask: action('onPinTask'),
 }
 
-// eslint-disable-next-line no-undef
 storiesOf('Task', module)
   .addDecorator(story => <View>{story()}</View>)
   .add('default view', () => <Task task={task} {...actions} />)
