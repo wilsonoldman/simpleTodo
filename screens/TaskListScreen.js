@@ -1,14 +1,14 @@
 import React from 'react'
-import { View, ScrollView } from 'react-native'
+import { View, ScrollView, Text } from 'react-native'
 import TaskList from '../containers/TaskList'
 import PropTypes from 'prop-types'
-import { setVisibilityFilter } from '../actions'
-import { connect } from 'react-redux'
 import PureFabButton from '../components/PureFabButton'
+import MenuList from '../containers/MenuList'
 
 function TaskListScreen({ navigation }) {
   return (
     <View style={{ flex: 1 }}>
+      <MenuList />
       <ScrollView>
         <TaskList />
       </ScrollView>
@@ -17,14 +17,6 @@ function TaskListScreen({ navigation }) {
   )
 }
 
-const mapStateToProps = state => ({
-  filter: state.visibility_filter,
-})
-
-const mapDispatchToProps = dispatch => ({
-  onChangeTab: filter => dispatch(setVisibilityFilter(filter)),
-})
-
 TaskListScreen.propTypes = {
   navigation: PropTypes.object,
   route: PropTypes.shape({
@@ -32,4 +24,4 @@ TaskListScreen.propTypes = {
   }),
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TaskListScreen)
+export default TaskListScreen

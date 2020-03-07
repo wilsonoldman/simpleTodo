@@ -1,5 +1,4 @@
 import React from 'react'
-import {} from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import { action } from '@storybook/addon-actions'
 import PureTaskList from './PureTaskList'
@@ -23,7 +22,6 @@ export const withPinnedTask = [
   { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
 ]
 
-// eslint-disable-next-line no-undef
 storiesOf('PureTaskList', module)
   .add('default', () => <PureTaskList tasks={tasks} {...actions} />)
   .add('empty', () => <PureTaskList tasks={[]} {...actions} />)

@@ -7,6 +7,7 @@ function loadStories() {
 	require('../components/PureFabButton.stories');
 	require('../components/PureTaskList.stories');
 	require('../components/Task.stories');
+	require('../containers/MenuList.stories');
 	require('../screens/CreateTaskScreen.stories');
 }
 
@@ -14,6 +15,7 @@ const stories = [
 	'../components/PureFabButton.stories',
 	'../components/PureTaskList.stories',
 	'../components/Task.stories',
+	'../containers/MenuList.stories',
 	'../screens/CreateTaskScreen.stories'
 ];
 
