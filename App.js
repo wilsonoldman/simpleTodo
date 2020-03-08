@@ -45,7 +45,9 @@ export default function App() {
             <Stack.Screen
               name="CreateTask"
               component={CreateTaskScreen}
-              options={{ headerShown: false }}
+              // TODO: headerを透明にする
+              // TODO: 保存ボタンとxボタンを作成する
+              options={{ headerStyle: { backgroundColor: 'rgb(242,242,242)' } }}
             />
           </Stack.Navigator>
         </NavigationContainer>

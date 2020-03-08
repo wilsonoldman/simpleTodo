@@ -1,5 +1,6 @@
 export const TITLES = {
-  SHOW_ALL: 'ALL',
+  SHOW_INBOX: 'INBOX',
   SHOW_PINNED: 'PINNED',
   SHOW_ARCHIVED: 'ARCHIVED',
+  SHOW_ALL: 'ALL',
 }

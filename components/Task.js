@@ -3,23 +3,35 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { Text, Checkbox } from 'react-native-paper'
 import PropTypes from 'prop-types'
 import { AntDesign } from '@expo/vector-icons'
+import { TaskStates } from '../actions'
 
 const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
   return (
     <View style={styles.container}>
       <Checkbox
-        status={state === 'TASK_ARCHIVED' ? 'checked' : 'unchecked'}
+        status={state === TaskStates.TASK_ARCHIVED ? 'checked' : 'unchecked'}
+        // TODO: popup dialog window to ask if task state is set to inbox
         onPress={() => onArchiveTask(id)}
-        style={{ width: 50 }}
+        style={styles.checkbox}
       />
-      <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
+      <Text
+        numberOfLines={1}
+        ellipsizeMode="tail"
+        style={[
+          styles.title,
+          state === TaskStates.TASK_ARCHIVED && styles.titleArchived,
+        ]}
+      >
         {title}
       </Text>
-      <TouchableOpacity onPress={() => onPinTask(id)} style={styles.starIcon}>
+      <TouchableOpacity
+        onPress={state !== TaskStates.TASK_ARCHIVED && (() => onPinTask(id))}
+        style={styles.starIcon}
+      >
         <AntDesign
           name="star"
           size={20}
-          color={state === 'TASK_PINNED' ? 'orange' : '#ccc'}
+          color={state === TaskStates.TASK_PINNED ? 'orange' : '#ccc'}
         />
       </TouchableOpacity>
     </View>
@@ -39,12 +51,18 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
   },
+  checkbox: {
+    width: 50,
+  },
   title: {
     flex: 1,
     fontSize: 20,
     paddingRight: 10,
     paddingLeft: 5,
     textAlignVertical: 'center',
+  },
+  titleArchived: {
+    color: '#777',
   },
   createdAt: {
     marginLeft: 'auto',

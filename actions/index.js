@@ -17,6 +17,7 @@ export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_PINNED: 'SHOW_PINNED',
   SHOW_ARCHIVED: 'SHOW_ARCHIVED',
+  SHOW_INBOX: 'SHOW_INBOX',
 }
 
 export const TaskStates = {

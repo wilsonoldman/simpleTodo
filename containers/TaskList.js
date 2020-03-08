@@ -11,6 +11,12 @@ const getVisibleTasks = (tasks, filter) => {
       return tasks.filter(task => task.state === TaskStates.TASK_PINNED)
     case VisibilityFilters.SHOW_ARCHIVED:
       return tasks.filter(task => task.state === TaskStates.TASK_ARCHIVED)
+    case VisibilityFilters.SHOW_INBOX:
+      return tasks.filter(
+        task =>
+          task.state === TaskStates.TASK_INBOX ||
+          task.state === TaskStates.TASK_PINNED
+      )
     default:
       throw new Error('Unknown filter: ' + filter)
   }

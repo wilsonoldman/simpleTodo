@@ -3,10 +3,10 @@ import { VisibilityFilters, TaskStates } from '../actions/index'
 
 const initialState = {
   tasks: [],
-  visibility_filter: VisibilityFilters.SHOW_ALL,
+  visibility_filter: VisibilityFilters.SHOW_INBOX,
 }
 
-const taskReducer = (state = [], action) => {
+const taskReducer = (state = initialState.tasks, action) => {
   switch (action.type) {
     case 'PIN_TASK':
       return state.map(task => {
