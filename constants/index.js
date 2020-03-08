@@ -1,0 +1,5 @@
+export const TITLES = {
+  SHOW_ALL: 'ALL',
+  SHOW_PINNED: 'PINNED',
+  SHOW_ARCHIVED: 'ARCHIVED',
+}

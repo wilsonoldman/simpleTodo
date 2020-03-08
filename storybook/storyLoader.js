@@ -5,17 +5,19 @@
 
 function loadStories() {
 	require('../components/PureFabButton.stories');
+	require('../components/PureMenuItem.stories');
+	require('../components/PureMenuList.stories');
 	require('../components/PureTaskList.stories');
 	require('../components/Task.stories');
-	require('../containers/MenuList.stories');
 	require('../screens/CreateTaskScreen.stories');
 }
 
 const stories = [
 	'../components/PureFabButton.stories',
+	'../components/PureMenuItem.stories',
+	'../components/PureMenuList.stories',
 	'../components/PureTaskList.stories',
 	'../components/Task.stories',
-	'../containers/MenuList.stories',
 	'../screens/CreateTaskScreen.stories'
 ];
 
