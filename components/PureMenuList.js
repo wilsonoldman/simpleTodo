@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, FlatList, StyleSheet } from 'react-native'
-import { Menu } from 'react-native-paper'
+import { Menu, Button } from 'react-native-paper'
 import PropTypes from 'prop-types'
 import PureMenuItem from './PureMenuItem'
 
@@ -20,11 +20,14 @@ const PureMenuList = ({ data, onItemPress, currentFilterTitle }) => {
         visible={visible}
         onDismiss={closeMenu}
         anchor={
-          <Menu.Item
-            title={currentFilterTitle}
+          <Button
             onPress={openMenu}
-            style={styles.anchorMenu}
-          />
+            labelStyle={styles.anchorButtonLabel}
+            icon="menu-down"
+            contentStyle={styles.anchorButtonContent}
+          >
+            {currentFilterTitle}
+          </Button>
         }
       >
         <FlatList
@@ -45,11 +48,12 @@ const PureMenuList = ({ data, onItemPress, currentFilterTitle }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    margin: 15,
   },
-  anchorMenu: {
-    backgroundColor: '#fff',
-    borderRadius: 2,
+  anchorButtonLabel: {
+    color: '#333',
   },
+  anchorButtonContent: { flexDirection: 'row-reverse', paddingLeft: 15 },
 })
 
 PureMenuList.propTypes = {
