@@ -27,7 +27,11 @@ const taskReducer = (state = initialState.tasks, action) => {
         }
         return task
       })
-
+    case 'ADD_TASK':
+      return [
+        ...state,
+        { id: action.id, title: action.title, state: action.state },
+      ]
     default:
       return state
   }

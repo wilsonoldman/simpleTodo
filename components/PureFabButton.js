@@ -18,12 +18,14 @@ const styles = StyleSheet.create({
 
 PureFabButton.propTypes = {
   onPress: PropTypes.func,
+  icon: PropTypes.string,
   label: PropTypes.string,
 }
 
 PureFabButton.defaultProps = {
   icon: 'plus',
-  label: 'Create',
+  label: '',
+  onPress: () => {},
 }
 
 export default PureFabButton

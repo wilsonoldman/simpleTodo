@@ -39,6 +39,7 @@ const PureMenuList = ({ data, onItemPress, currentFilterTitle }) => {
               selected={item.title === currentFilterTitle}
             />
           )}
+          keyExtractor={item => item.id}
         />
       </Menu>
     </View>

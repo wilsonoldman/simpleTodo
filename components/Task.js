@@ -10,7 +10,7 @@ const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
     <View style={styles.container}>
       <Checkbox
         status={state === TaskStates.TASK_ARCHIVED ? 'checked' : 'unchecked'}
-        // TODO: popup dialog window to ask if task state is set to inbox
+        // TODO: ポップアップウィンドウを表示し、タスクをインボックスに戻すかユーザーに尋ねる
         onPress={() => onArchiveTask(id)}
         style={styles.checkbox}
       />

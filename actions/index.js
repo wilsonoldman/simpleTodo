@@ -1,3 +1,11 @@
+let nextTaskId = 1000
+export const addTask = ({ title, state }) => ({
+  type: 'ADD_TASK',
+  id: '' + nextTaskId++,
+  title,
+  state,
+})
+
 export const pinTask = id => ({
   type: 'PIN_TASK',
   id,

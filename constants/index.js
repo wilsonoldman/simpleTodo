@@ -4,3 +4,8 @@ export const TITLES = {
   SHOW_ARCHIVED: 'ARCHIVED',
   SHOW_ALL: 'ALL',
 }
+
+export const CREATE_TASK = {
+  TITLE: 'タイトル',
+  DESCRIPTION: '詳細',
+}

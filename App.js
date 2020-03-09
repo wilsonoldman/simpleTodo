@@ -1,23 +1,17 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { Provider as StoreProvider } from 'react-redux'
-import { Provider as PaperProvider } from 'react-native-paper'
+import { Provider as PaperProvider, Button } from 'react-native-paper'
 import { createStackNavigator } from '@react-navigation/stack'
 import StorybookUIRoot from './storybook'
 import CreateTaskScreen from './screens/CreateTaskScreen'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 import moment from 'moment'
 import store from './store/store'
 import TaskListScreen from './screens/TaskListScreen'
-import { Button } from 'react-native-paper'
 import { Text } from 'react-native'
+import { AntDesign } from '@expo/vector-icons'
 
 const Stack = createStackNavigator()
-
-//font awesome initialization
-library.add(faStar)
-
 moment.locale('ja')
 
 export default function App() {
@@ -45,9 +39,11 @@ export default function App() {
             <Stack.Screen
               name="CreateTask"
               component={CreateTaskScreen}
-              // TODO: headerを透明にする
-              // TODO: 保存ボタンとxボタンを作成する
-              options={{ headerStyle: { backgroundColor: 'rgb(242,242,242)' } }}
+              options={{
+                headerTitle: 'Add New Task',
+                headerStyle: { backgroundColor: 'rgba(0,0,0,0)' },
+                headerBackImage: () => <AntDesign name="close" size={22} />,
+              }}
             />
           </Stack.Navigator>
         </NavigationContainer>
